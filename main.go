@@ -59,8 +59,14 @@ func (e EnvVars) buildFQDN() string {
 	return fqdn
 }
 
-// TODO: tailwindcss
+// TODO: add more weather data and location
 // TODO: read from template html file
+// TODO: accept input from form
+// TODO: tailwindcss
+// TODO: get unsplash/cc photo of location
+// TODO: use geolocation from browser
+// TODO: cache weather data (boltdb?)
+// TODO: migrate from make to task
 func main() {
 	envVars := getEnvVars()
 
