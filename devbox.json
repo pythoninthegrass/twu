@@ -1,0 +1,23 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jetpack-io/devbox/0.10.3/.schema/devbox.schema.json",
+    "packages": [
+      "asdf-vm@latest",
+      "bat@latest",
+      "gh@latest",
+      "git@latest",
+      "gnumake@latest",
+      "go-task@latest",
+      "openssl@latest",
+      "tilt@latest"
+    ],
+    "shell": {
+      "init_hook": [
+        "bat README.md"
+      ],
+      "scripts": {
+        "test": [
+          "go test./..."
+        ]
+      }
+    }
+  }
