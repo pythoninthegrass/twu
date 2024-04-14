@@ -1,0 +1,37 @@
+fail_fast: true
+
+repos:
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.57.2
+    hooks:
+    - id: golangci-lint
+      args: ['run', '--timeout=5m', '--skip-dirs=vendor', '--skip-dirs=third_party', '--skip-dirs=proto']
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    - id: check-yaml
+    - id: check-added-large-files
+      args: ['--maxkb=1024']
+    - id: check-executables-have-shebangs
+    - id: check-merge-conflict
+    - id: check-shebang-scripts-are-executable
+    - id: check-symlinks
+    - id: check-toml
+    - id: check-yaml
+      args: [--unsafe]
+    - id: debug-statements
+    - id: destroyed-symlinks
+    - id: detect-private-key
+    - id: end-of-file-fixer
+    - id: fix-byte-order-marker
+    - id: mixed-line-ending
+    - id: pretty-format-json
+      # https://pre-commit.com/#regular-expressions
+      exclude: |
+          (?x)^(
+              .vscode/extensions.json|
+              .vscode/launch.json|
+              .vscode/settings.json|
+              .vscode/tasks.json
+          )$
+      args: ['--autofix', '--indent=2', '--no-sort-keys']
