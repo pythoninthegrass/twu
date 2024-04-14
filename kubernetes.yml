@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: twu
+  labels:
+    app: twu
+spec:
+  selector:
+    matchLabels:
+      app: twu
+  template:
+    metadata:
+      labels:
+        app: twu
+    spec:
+      containers:
+      - name: twu
+        image: twu
+        ports:
+        - containerPort: 8080
