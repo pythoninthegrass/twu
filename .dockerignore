@@ -1,0 +1,12 @@
+**/.DS_Store
+**/.git
+**/.gitignore
+**/.history/
+**/*.dll
+**/*.dylib
+**/*.env
+**/*.exe
+**/*.out
+**/*.so
+**/*.test
+**/vendor/

@@ -2,14 +2,24 @@
     "[go]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true,
+            "source.organizeImports": "explicit"
         },
     },
     "[go.mod]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true,
+            "source.organizeImports": "explicit"
         },
+    },
+    // go.gopath
+    "go.gopath": "~/.asdf/installs/golang/1.22.2/packages",
+    // go.goroot
+    "go.goroot": "~/.asdf/installs/golang/1.22.2/go",
+    // go.testFlags
+    "go.testTimeout": "180s",
+    // go.toolsEnvVars
+    "go.toolsEnvVars": {
+      "GOPROXY": "https://proxy.golang.org,direct"
     },
     // gopls
     "go.useLanguageServer": true,
@@ -17,7 +27,7 @@
         "formatting.local": "github.com/golang-templates/seed",
         "formatting.gofumpt": true
     },
-    // golangci-lint  
+    // golangci-lint
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
